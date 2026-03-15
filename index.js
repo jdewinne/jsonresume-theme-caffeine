@@ -4,6 +4,7 @@ const
   handlebarsWax = require('handlebars-wax'),
   addressFormat = require('address-format'),
   moment = require('moment'),
+  { marked } = require('marked'),
   Swag = require('swag');
 
 Swag.registerHelpers(handlebars);
@@ -40,6 +41,10 @@ handlebars.registerHelper({
 
   formatDate: function (date) {
     return moment(date).format('MM/YYYY');
+  },
+
+  markdown: function (text) {
+    return new handlebars.SafeString(marked.parseInline(text || ''));
   }
 });
 
