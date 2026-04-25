@@ -1,8 +1,8 @@
 {
   "author": "Kelvin Nguyen",
-  "name": "jsonresume-theme-caffeine",
+  "name": "@jdewinne/jsonresume-theme-caffeine",
   "description": "Caffeine theme for JSON Resume",
-  "version": "2.0.1",
+  "version": "2.0.9",
   "keywords": [
     "json",
     "resume",
@@ -37,7 +37,7 @@
     "gulp-load-plugins": "^2.0.1",
     "gulp-plumber": "^1.1.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
     "gulp-serve": "^1.4.0",
     "gulp-size": "^3.0.0",
     "gulp-uglify": "^3.0.2",
@@ -47,14 +47,15 @@
     "lazypipe": "^1.0.1",
     "opn": "^6.0.0",
     "require-dir": "^1.2.0",
+    "sass": "^1.98.0",
     "serve-index": "^1.8.0",
     "yargs": "^15.0.2"
   },
   "dependencies": {
     "address-format": "0.0.3",
-    "marked": "^14.0.0",
     "handlebars": "^4.0.5",
     "handlebars-wax": "^6.1.0",
+    "marked": "^14.0.0",
     "moment": "^2.17.1",
     "resume-cli": "2.2.4",
     "swag": "^0.7.0"

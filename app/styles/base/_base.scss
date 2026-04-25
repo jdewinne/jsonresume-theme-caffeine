@@ -77,6 +77,13 @@ a {
   }
 }
 
+p, li {
+  a {
+    color: $link-color;
+    text-decoration: underline;
+  }
+}
+
 p,
 li {
   @include font-size(2.75);
@@ -124,5 +131,5 @@ ul {
 }
 
 @page {
-  size: A4;
+  size: letter;
 }

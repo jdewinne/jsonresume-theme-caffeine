@@ -43,8 +43,19 @@ handlebars.registerHelper({
     return moment(date).format('MM/YYYY');
   },
 
+  coalesce: function () {
+    for (let i = 0; i < arguments.length - 1; i++) {
+      if (arguments[i]) return arguments[i];
+    }
+    return '';
+  },
+
   markdown: function (text) {
-    return new handlebars.SafeString(marked.parseInline(text || ''));
+    const html = marked.parseInline(text || '')
+      .replace(/&#39;/g, "'")
+      .replace(/&amp;/g, '&')
+      .replace(/&quot;/g, '"');
+    return new handlebars.SafeString(html);
   }
 });
 
